@@ -10,6 +10,8 @@ public class SpawnEnemies : MonoBehaviour
     [SerializeField] FloatReference _currentProgress;
     [SerializeField] AnimationCurve _curve;
     [SerializeField] Transform _currentPathPosition;
+
+    [SerializeField] Vector2 _xSpawnRange = new Vector2(-5,5);
     [SerializeField] WeightedRandom<GameObject> enemiesToSpawn;
     [ShowInInspector, ReadOnly]
     int enemiesSpawned = 0;
@@ -37,11 +39,16 @@ public class SpawnEnemies : MonoBehaviour
 
         var enemy = Instantiate(
             enemiesToSpawn.GetRandom(), 
-            _currentPathPosition.position + offset, 
+            GetPosition(offset), 
             Quaternion.Euler(0,0,180)
         );
 
         OnSpawnEnemy?.Invoke(enemy);
+    }
+
+    private Vector3 GetPosition(Vector3 offset) {
+        return _currentPathPosition.position + offset + 
+               (Vector3.right * Random.Range(_xSpawnRange.x, _xSpawnRange.y));
     }
 
 }
