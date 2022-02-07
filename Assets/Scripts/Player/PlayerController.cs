@@ -29,12 +29,18 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if (GameManager.I.State != GameState.Game) return;
+        if (!CanUpdate()) return;
         transform.Translate(_speed * Time.deltaTime * _input.Direction.normalized);
          
         //rbdy2D.MovePosition(rbdy2D.position + _speed * Time.deltaTime * _input.Direction.normalized);
 
         invincibilityTimer = Mathf.Max(0, invincibilityTimer - Time.deltaTime);
+    }
+
+    bool CanUpdate() {
+        if (GameManager.I == null) 
+            return true;
+        return GameManager.I.State == GameState.Game;
     }
 
     void OnCollisionEnter2D(Collision2D other) {

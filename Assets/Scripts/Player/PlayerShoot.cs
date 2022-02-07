@@ -19,7 +19,7 @@ public class PlayerShoot : MonoBehaviour
     float timer = 0;
 
     void Update() {
-        if (GameManager.I.State != GameState.Game) return;
+        if (!CanUpdate()) return;
         timer += Time.deltaTime;
         if (timer > 1f/_stats.ShotsPerSecond) {
             if (_input.Shoot) {
@@ -27,6 +27,12 @@ public class PlayerShoot : MonoBehaviour
                 timer = 0;
             }
         }
+    }
+
+    bool CanUpdate() {
+        if (GameManager.I == null) 
+            return true;
+        return GameManager.I.State == GameState.Game;
     }
 
     void Fire() {
