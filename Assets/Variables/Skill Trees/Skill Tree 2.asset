@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910e312622a7bc149acd65dab9bef04f, type: 3}
+  m_Name: Skill Tree 2
+  m_EditorClassIdentifier: 
+  description: 'Increase Number of Bullets in a radial pattern
+
+
+    1 Shot -> 2
+    Shot -> 4 Shot -> 8 Shot'
+  _defaultLevel: {fileID: 11400000, guid: d67e403fe0f7c0842a1be50afab80b66, type: 2}
+  Levels:
+  - I: 1
+    Value: {fileID: 11400000, guid: a4ed89ff216a69c44a9474e5bb7750b0, type: 2}
+  - I: 2
+    Value: {fileID: 11400000, guid: 31a4fd372fc1c1143b1637e4a32de0c8, type: 2}
+  - I: 3
+    Value: {fileID: 11400000, guid: fd3e4891b50345a47a5673846a98f1f7, type: 2}

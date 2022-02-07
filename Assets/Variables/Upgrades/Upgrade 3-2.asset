@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d81bb42e89a744397da05aed1bdc1f, type: 3}
+  m_Name: Upgrade 3-2
+  m_EditorClassIdentifier: 
+  _stats: {fileID: 11400000, guid: 0b7d5b518c0fecb448b604e8c3fa5b55, type: 2}
+  _bulletPrefab: {fileID: 3941875684618641491, guid: a115a477bd8788f41a35be98f6ef83d3, type: 3}

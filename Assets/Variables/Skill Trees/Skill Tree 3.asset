@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910e312622a7bc149acd65dab9bef04f, type: 3}
+  m_Name: Skill Tree 3
+  m_EditorClassIdentifier: 
+  description: 'Change Bullet Type to Missile
+
+
+    1 Shot -> Missile -> Homing Missile
+    -> Frag Missile'
+  _defaultLevel: {fileID: 11400000, guid: d67e403fe0f7c0842a1be50afab80b66, type: 2}
+  Levels:
+  - I: 1
+    Value: {fileID: 11400000, guid: 7eb1a3cd74100fb499ba62644ac3c109, type: 2}
+  - I: 2
+    Value: {fileID: 11400000, guid: aab212eb47b280f488e466addfcc56d6, type: 2}
+  - I: 3
+    Value: {fileID: 11400000, guid: 0b56e1686470ea84982ae20987abc38e, type: 2}

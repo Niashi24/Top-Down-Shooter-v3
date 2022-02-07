@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e8119ef50337047b61ec8700d81ebc, type: 3}
+  m_Name: Enemy Random Table
+  m_EditorClassIdentifier: 
+  items:
+  - Value1: 2
+    Value2: {fileID: 1738432608396686232, guid: 878d82329988b224688afa39719bfc93, type: 3}
+  - Value1: 1
+    Value2: {fileID: 5145876702010493384, guid: bafc89a1d87b1b344b585bf6ced4e503, type: 3}
