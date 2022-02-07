@@ -32,8 +32,8 @@ public class PlayerStats : ScriptableObject
         OnStatChange?.Invoke(this);
     }
 
-    public void SetHealth(int newPierce) {
-        pierce.Value = newPierce;
+    public void SetHealth(int newHealth) {
+        health.Value = newHealth;
         OnStatChange?.Invoke(this);
     }
 }

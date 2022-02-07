@@ -319,3 +319,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomObjects: {fileID: 11400000, guid: 376e3e8a168c3844990fb9fc2fee341f, type: 2}
+  _chance: 0.5
