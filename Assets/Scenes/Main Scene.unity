@@ -1077,17 +1077,17 @@ MonoBehaviour:
   OnFinishSelection:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997532497}
-        m_TargetAssemblyTypeName: DestroyAfterTime, Assembly-CSharp
-        m_MethodName: StartDestroy
-        m_Mode: 1
+      - m_Target: {fileID: 1997532496}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 610142744}
         m_TargetAssemblyTypeName: SetGameState, Assembly-CSharp
@@ -147701,6 +147701,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Input Display Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2236720234374830462, guid: 8852dbd3641fd3e4882f3d9bd5344db9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186121246611946114, guid: 8852dbd3641fd3e4882f3d9bd5344db9, type: 3}
+      propertyPath: OnAllActive.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186121246611946114, guid: 8852dbd3641fd3e4882f3d9bd5344db9, type: 3}
+      propertyPath: OnAllActive.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186121246611946114, guid: 8852dbd3641fd3e4882f3d9bd5344db9, type: 3}
+      propertyPath: OnAllActive.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1997532497}
+    - target: {fileID: 3186121246611946114, guid: 8852dbd3641fd3e4882f3d9bd5344db9, type: 3}
+      propertyPath: OnAllActive.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186121246611946114, guid: 8852dbd3641fd3e4882f3d9bd5344db9, type: 3}
+      propertyPath: OnAllActive.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartDestroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186121246611946114, guid: 8852dbd3641fd3e4882f3d9bd5344db9, type: 3}
+      propertyPath: OnAllActive.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DestroyAfterTime, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186121246611946114, guid: 8852dbd3641fd3e4882f3d9bd5344db9, type: 3}
+      propertyPath: OnAllActive.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8852dbd3641fd3e4882f3d9bd5344db9, type: 3}
 --- !u!1 &1997532496 stripped
@@ -147720,7 +147752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ec4af3c0898d346a6dd5f67bad94b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _time: 5
+  _time: 3
   _activateOnStart: 0
 --- !u!1 &2023428322
 GameObject:

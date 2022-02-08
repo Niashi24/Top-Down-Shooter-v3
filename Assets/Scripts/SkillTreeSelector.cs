@@ -53,5 +53,6 @@ public class SkillTreeSelector : MonoBehaviour
     //or by this if customization is enabled
     public void FinishSelection() {
         OnFinishSelection?.Invoke();
+        gameObject.SetActive(false);
     }
 }

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1525197877938629061, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+  m_Sprite: {fileID: 1445807592529256362, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9167544883114675299, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+  m_Sprite: {fileID: 3783601193519709514, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5468524050650381355, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+  m_Sprite: {fileID: -5618188159814416422, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7876459636400162764, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+  m_Sprite: {fileID: -4070566330327264590, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3728700402967481340, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+  m_Sprite: {fileID: 1088976595379524890, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 2236720234374830459}
   - component: {fileID: 2236720234374830456}
   - component: {fileID: 2236720234374830457}
+  - component: {fileID: 3186121246611946114}
   m_Layer: 5
   m_Name: Input Display Canvas
   m_TagString: Untagged
@@ -441,7 +442,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2236720234374830462}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.057803206, y: 0.057803206, z: 0.057803206}
   m_Children:
@@ -515,3 +516,44 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 247
+--- !u!114 &3186121246611946114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236720234374830462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d322354f56802c94b8b661dae9720834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _input: {fileID: 11400000, guid: c3adc1d145f8ad24abea03900a11c4d4, type: 2}
+  _up:
+    inactiveSprite: {fileID: -4070566330327264590, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    activeSprite: {fileID: 7876459636400162764, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    image: {fileID: 2236720234123675149}
+    active: 0
+  _down:
+    inactiveSprite: {fileID: 1445807592529256362, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    activeSprite: {fileID: 1525197877938629061, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    image: {fileID: 2236720232939329977}
+    active: 0
+  _left:
+    inactiveSprite: {fileID: 1088976595379524890, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    activeSprite: {fileID: -3728700402967481340, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    image: {fileID: 2236720234207892997}
+    active: 0
+  _right:
+    inactiveSprite: {fileID: -5618188159814416422, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    activeSprite: {fileID: 5468524050650381355, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    image: {fileID: 2236720233953984873}
+    active: 0
+  _shoot:
+    inactiveSprite: {fileID: 3783601193519709514, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    activeSprite: {fileID: -9167544883114675299, guid: 38d04cbed7ae3a6449e34366c22a00dd, type: 3}
+    image: {fileID: 2236720233705259279}
+    active: 0
+  OnAllActive:
+    m_PersistentCalls:
+      m_Calls: []
