@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     [ReadOnly, ShowInInspector]
     public GameState State {get; private set;}
 
-    void Start() {
+    void Awake() {
         if (I == null){
             I = this;
             DontDestroyOnLoad(gameObject);

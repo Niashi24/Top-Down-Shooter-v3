@@ -968,8 +968,8 @@ GameObject:
   - component: {fileID: 610142739}
   - component: {fileID: 610142741}
   - component: {fileID: 610142740}
-  - component: {fileID: 610142742}
   - component: {fileID: 610142743}
+  - component: {fileID: 610142742}
   - component: {fileID: 610142744}
   m_Layer: 5
   m_Name: Upgrade Panel
@@ -1077,18 +1077,6 @@ MonoBehaviour:
   OnFinishSelection:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997532496}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 610142744}
         m_TargetAssemblyTypeName: SetGameState, Assembly-CSharp
         m_MethodName: SetState
@@ -1100,6 +1088,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1997532496}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!95 &610142743
 Animator:

@@ -6,6 +6,14 @@ public class SetGameState : MonoBehaviour
 {
     [SerializeField] GameState newState;
     public void SetState() {
-        GameManager.I?.ChangeState(newState);
+        if (GameManager.I == null)
+        {
+            Debug.LogWarning(
+                "Trying to Change State When GameManager not Initialized",
+                this
+            );
+            return;
+        }
+        GameManager.I.ChangeState(newState);
     }
 }

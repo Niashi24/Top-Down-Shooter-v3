@@ -43,7 +43,8 @@ public class SkillTreeSelector : MonoBehaviour
 
     void UpdateColors() {
         for (int i = 0; i < selections.Length; i++) {
-            selections[i].Value2.color = selected == i ?
+            selections[i].Value2.color = 
+                selected == i ?
                 _selectedColor :
                 _unselectedColor;
         }
