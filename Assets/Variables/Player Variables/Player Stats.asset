@@ -34,5 +34,11 @@ MonoBehaviour:
     _usage: 2
     _value: 0
     _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: c9697a908a432554988624c1d8ce5cde, type: 2}
+    _variableInstancer: {fileID: 0}
+  maxHealth:
+    _usage: 2
+    _value: 6
+    _constant: {fileID: 0}
     _variable: {fileID: 11400000, guid: e05170d4b6d222d47bfb74fd623950cd, type: 2}
     _variableInstancer: {fileID: 0}

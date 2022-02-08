@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeightedRandom<T> : ScriptableObject
+public class WeightedRandom<T> : RandomSupplier<T>
 {
     [SerializeField]
     List<TypePair<int, T>> items;
 
-    public T GetRandom() {
+    public override T GetRandom() {
         return GetRandomWithWeights(GetWeights(items), items);
     }
 

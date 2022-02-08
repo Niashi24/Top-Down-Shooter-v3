@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnRandomPrefab : MonoBehaviour
 {
-    [SerializeField] WeightedGameObject _randomObjects;
+    [SerializeField] RandomSupplier<GameObject> _randomObjects;
     [SerializeField, Range(0, 1)] float _chance = 1;
 
     public void SpawnPrefab() 

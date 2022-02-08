@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414058092830979744, guid: 5aa73a93172f2964c9da9082f578e5c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.2
+      value: 0.3000002
       objectReference: {fileID: 0}
     - target: {fileID: 5414058092830979744, guid: 5aa73a93172f2964c9da9082f578e5c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -392,8 +392,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1995932099
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -3290,8 +3290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 37.494404}
-  m_SizeDelta: {x: -32, y: 85.0112}
+  m_AnchoredPosition: {x: 0, y: -87}
+  m_SizeDelta: {x: -32, y: 82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904253809
 MonoBehaviour:
@@ -3368,7 +3368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: 115.75}
   m_SizeDelta: {x: -32, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907828727

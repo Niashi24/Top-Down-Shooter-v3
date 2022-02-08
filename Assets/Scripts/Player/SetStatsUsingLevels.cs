@@ -35,16 +35,16 @@ public class SetStatsUsingLevels : MonoBehaviour
     public void UpdateStat(Stats stat) {
         switch (stat) {
             case Stats.Damage:
-                stats.SetDamage(_damageUpgrade[_damageLevel.Value]);
+                UpdateDamage();
                 break;
             case Stats.FireRate:
-                stats.SetSPS(_fireRateUpgrade[_fireRateLevel.Value]);
+                UpdateFireRate();
                 break;
             case Stats.Health:
-                stats.SetHealth(_healthUpgrade[_healthLevel.Value]);
+                UpdateHealth();
                 break;
             case Stats.Pierce:
-                stats.SetPierce(_pierceUpgrade[_pierceLevel.Value]);
+                UpdatePierce();
                 break;
         }
     }
@@ -58,7 +58,7 @@ public class SetStatsUsingLevels : MonoBehaviour
     }
 
     public void UpdateHealth() {
-        stats.SetHealth(_healthUpgrade[_healthLevel.Value]);
+        stats.SetMaxHealth(_healthUpgrade[_healthLevel.Value]);
     }
 
     public void UpdatePierce() {

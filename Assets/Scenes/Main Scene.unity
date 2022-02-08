@@ -970,6 +970,7 @@ GameObject:
   - component: {fileID: 610142740}
   - component: {fileID: 610142742}
   - component: {fileID: 610142743}
+  - component: {fileID: 610142744}
   m_Layer: 5
   m_Name: Upgrade Panel
   m_TagString: Untagged
@@ -1052,6 +1053,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12b69cfd4a036e4084521e625caa55e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _customizationEnabled:
+    _usage: 0
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
   _reference: {fileID: 11400000, guid: 4e1f20a3440dd4f4199e57b2e791e59e, type: 2}
   selections:
   - Value1: {fileID: 1788499784}
@@ -1067,6 +1074,33 @@ MonoBehaviour:
   _selectedColor: {r: 0.9960785, g: 0.8941177, b: 0.5058824, a: 1}
   _unselectedColor: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
   selected: 0
+  OnFinishSelection:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1997532497}
+        m_TargetAssemblyTypeName: DestroyAfterTime, Assembly-CSharp
+        m_MethodName: StartDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 610142744}
+        m_TargetAssemblyTypeName: SetGameState, Assembly-CSharp
+        m_MethodName: SetState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &610142743
 Animator:
   serializedVersion: 3
@@ -1086,6 +1120,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &610142744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610142738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db91f7163e1aca04cb84f1cfa4ad1b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newState: 3
 --- !u!4 &612034533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5414058092830979744, guid: 5aa73a93172f2964c9da9082f578e5c3, type: 3}
@@ -146719,7 +146766,6 @@ GameObject:
   - component: {fileID: 1475063113}
   - component: {fileID: 1475063112}
   - component: {fileID: 1475063111}
-  - component: {fileID: 1475063114}
   m_Layer: 5
   m_Name: Confirm Button
   m_TagString: Untagged
@@ -146791,9 +146837,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1475063114}
-        m_TargetAssemblyTypeName: SetGameState, Assembly-CSharp
-        m_MethodName: SetState
+      - m_Target: {fileID: 610142742}
+        m_TargetAssemblyTypeName: SkillTreeSelector, Assembly-CSharp
+        m_MethodName: FinishSelection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -146841,19 +146887,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475063109}
   m_CullTransparentMesh: 1
---- !u!114 &1475063114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475063109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db91f7163e1aca04cb84f1cfa4ad1b58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newState: 3
 --- !u!1 &1504766311
 GameObject:
   m_ObjectHideFlags: 0
@@ -147688,6 +147721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _time: 5
+  _activateOnStart: 0
 --- !u!1 &2023428322
 GameObject:
   m_ObjectHideFlags: 0

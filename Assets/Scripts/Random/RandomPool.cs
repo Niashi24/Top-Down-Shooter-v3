@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class RandomPool<T> : ScriptableObject
+public class RandomPool<T> : RandomSupplier<T>
 {
     [SerializeField]
     List<TypePair<int, T>> weights;
@@ -15,7 +15,7 @@ public class RandomPool<T> : ScriptableObject
         numberOfEachItem = new List<int>(weights.Map(x => x.Value1));    
     }
 
-    public T GetRandom() {
+    public override T GetRandom() {
         var index = GetRandomIndexWithWeights(GetWeights(numberOfEachItem));
         return weights[index].Value2;
     }

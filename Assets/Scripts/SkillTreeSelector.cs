@@ -1,11 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SkillTreeSelector : MonoBehaviour
 {
+    [SerializeField] BoolReference _customizationEnabled;
     [SerializeField] SkillTreeReference _reference;
 
     [SerializeField]
@@ -18,12 +18,15 @@ public class SkillTreeSelector : MonoBehaviour
 
     public int selected = 0;
 
+    [SerializeField] UnityEvent OnFinishSelection;
+
     void Start() {
         for (int i = 0; i < selections.Length; i++) {
             int ii = i;
             selections[i].Value1.onClick.AddListener(() => SetReference(ii));
         }
         SetReference(selected);
+        if (!_customizationEnabled.Value) FinishSelection();
     }
 
     void SetReference(int index) {
@@ -44,5 +47,11 @@ public class SkillTreeSelector : MonoBehaviour
                 _selectedColor :
                 _unselectedColor;
         }
+    }
+    
+    //Called by either confirm button unityevent
+    //or by this if customization is enabled
+    public void FinishSelection() {
+        OnFinishSelection?.Invoke();
     }
 }

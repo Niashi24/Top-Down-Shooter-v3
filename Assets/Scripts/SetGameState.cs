@@ -6,6 +6,6 @@ public class SetGameState : MonoBehaviour
 {
     [SerializeField] GameState newState;
     public void SetState() {
-        GameManager.I.ChangeState(newState);
+        GameManager.I?.ChangeState(newState);
     }
 }

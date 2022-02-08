@@ -16,6 +16,8 @@ public class PlayerStats : ScriptableObject
     public int Damage => damage.Value;
     [SerializeField] IntReference health;
     public int Health => health.Value;
+    [SerializeField] IntReference maxHealth;
+    public int MaxHealth => maxHealth.Value;
 
     public void SetSPS(int newSPS) {
         shotsPerSecond.Value = newSPS;
@@ -32,8 +34,10 @@ public class PlayerStats : ScriptableObject
         OnStatChange?.Invoke(this);
     }
 
-    public void SetHealth(int newHealth) {
-        health.Value = newHealth;
+    public void SetMaxHealth(int newHealth) {
+        maxHealth.Value = newHealth;
+        health.Value = Mathf.Min(health.Value, maxHealth.Value);
+
         OnStatChange?.Invoke(this);
     }
 }
