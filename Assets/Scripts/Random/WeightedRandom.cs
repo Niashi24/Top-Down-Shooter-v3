@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class WeightedRandom<T> : RandomSupplier<T>
 {
     [SerializeField]
     List<TypePair<int, T>> items;
+
+    public WeightedRandom(IEnumerable<TypePair<int, T>> items) {
+        this.items = items.ToList();
+    }
 
     public override T GetRandom() {
         return GetRandomWithWeights(GetWeights(items), items);
