@@ -24,7 +24,7 @@ public class BouncePlayerInput : PlayerMovementInput
             }
             return Vector2.right;
         } else {
-            if (HitLeftEdge.Log(this)) {    
+            if (HitLeftEdge) {    
                 movingRight = true;
                 return Vector2.right;
             }
