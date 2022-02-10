@@ -17,7 +17,6 @@ public class BouncePlayerInput : PlayerMovementInput
     bool HitLeftEdge => transform.position.x < _xRange.x;
 
     public override Vector2 Direction {get {
-
         if (movingRight) {
             if (HitRightEdge) {
                 movingRight = false;
