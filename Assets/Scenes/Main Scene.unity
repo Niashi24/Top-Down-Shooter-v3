@@ -137613,7 +137613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b32163de7e0ade4eb3739f67ccd8b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 3
+  _speed: 1
   _distance: 100
   targets:
   - {fileID: 519420032}
