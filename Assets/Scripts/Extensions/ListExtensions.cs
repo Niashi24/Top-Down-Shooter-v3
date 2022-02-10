@@ -40,4 +40,9 @@ public static class ListExtensions
         Debug.Log(log);
         return log;
     }
+
+    public static T Log<T>(this T log, UnityEngine.Object context) {
+        Debug.Log(log, context);
+        return log;
+    }
 }

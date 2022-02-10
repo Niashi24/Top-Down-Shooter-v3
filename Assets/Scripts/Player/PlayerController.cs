@@ -30,7 +30,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() {
         if (!CanUpdate()) return;
-        transform.Translate(_speed * Time.deltaTime * _input.Direction.normalized);
+        transform.Translate(
+            _speed * Time.deltaTime * _input.Direction.normalized,
+            Space.World
+        );
          
         //rbdy2D.MovePosition(rbdy2D.position + _speed * Time.deltaTime * _input.Direction.normalized);
 

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1738432608396686239}
   - component: {fileID: 1738432608396686237}
   - component: {fileID: 1738432608396686236}
-  - component: {fileID: 1738432608396686211}
   - component: {fileID: 1738432608396686214}
+  - component: {fileID: 3267434756930684538}
   - component: {fileID: 1738432608396686210}
   - component: {fileID: 5897147049940024092}
   - component: {fileID: 3169548121101341114}
@@ -139,21 +139,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1738432608396686211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738432608396686232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6673685e9c819144a0bff1b6e0227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moves:
-  - {x: 5, y: 0}
-  - {x: -5, y: 0}
 --- !u!114 &1738432608396686214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +152,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shootInput: {fileID: 0}
-  _movementInput: {fileID: 1738432608396686211}
+  _movementInput: {fileID: 3267434756930684538}
+--- !u!114 &3267434756930684538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738432608396686232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3ddde5596a17141b9d87315e34c439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _xRange: {x: -3, y: 3}
 --- !u!114 &1738432608396686210
 MonoBehaviour:
   m_ObjectHideFlags: 0
