@@ -11,6 +11,7 @@ public class SpawnRandomPrefab : MonoBehaviour
     {
         if (Random.value <= _chance) return;
         var random = _randomObjects.GetRandom();
+        if (random == null) return;
         
         Instantiate(
             random,

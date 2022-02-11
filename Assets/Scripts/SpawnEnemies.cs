@@ -42,6 +42,10 @@ public class SpawnEnemies : MonoBehaviour
             GetPosition(offset), 
             Quaternion.Euler(0,0,180)
         );
+        
+        if (TryGetComponent<DestroyIfTooFarAwayFrom>(out var destroyIf)) {
+            destroyIf.SetTransform(_currentPathPosition);
+        }
 
         OnSpawnEnemy?.Invoke(enemy);
     }
