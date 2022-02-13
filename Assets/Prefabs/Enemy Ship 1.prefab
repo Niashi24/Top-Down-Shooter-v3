@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 1738432608396686209}
   - component: {fileID: 1738432608396686213}
   - component: {fileID: -661907223202968663}
+  - component: {fileID: 6505323027788692782}
   m_Layer: 7
   m_Name: Enemy Ship 1
   m_TagString: Enemy
@@ -318,3 +319,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _randomObjects: {fileID: 11400000, guid: 376e3e8a168c3844990fb9fc2fee341f, type: 2}
   _chance: 0.5
+--- !u!114 &6505323027788692782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738432608396686232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e519149fefb585f48b780f5ce7ba2c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 0}
+  _maxDistance: 15
+  OnDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
