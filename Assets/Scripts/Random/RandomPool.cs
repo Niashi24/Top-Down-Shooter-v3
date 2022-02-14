@@ -8,53 +8,32 @@ public class RandomPool<T> : RandomSupplier<T>
     [SerializeField]
     List<TypePair<int, T>> weights;
 
+    private List<T> pool;
+
     [ShowInInspector, ReadOnly]
     private List<int> numberOfEachItem;
 
+    public void Reset() {
+        pool = new List<T>();
+        foreach(var item in weights) {
+            for (int i = 0; i < item.Value1; i++) {
+                pool.Add(item.Value2);
+            }
+        }
+    }
+
     void OnEnable() {
+        Reset(); 
         numberOfEachItem = new List<int>(weights.Map(x => x.Value1));    
     }
 
     public override T GetRandom() {
-        var index = GetRandomIndexWithWeights(GetWeights(numberOfEachItem));
-        return weights[index].Value2;
-    }
+        int index = (int)(RandomValue() * pool.Count);
+        
+        var random = pool[index];
+        pool.RemoveAt(index);
 
-    float[] GetWeights(List<int> weights) {
-        int sum = 0;
-        for (int i = 0; i < this.weights.Count; i++) {
-            sum += weights[i];
-        }
-
-        float[] floatWeights = new float[weights.Count];
-        for (int i = 0; i < floatWeights.Length; i++) {
-            floatWeights[i] = weights[i] / (float)sum;
-        }
-
-        return floatWeights;
-    }
-
-    int GetRandomIndexWithWeights(float[] weights) {
-        var random = RandomValue();
-        float sum = 0;
-        for (int i =0 ;i < weights.Length; i++) {
-            sum += weights[i];
-            if (random < sum)
-                return i;
-        }
-        return weights.Length - 1;
-    }
-
-    T GetRandomWithWeights(float[] weights, List<TypePair<int, T>> items) {
-
-        var random = RandomValue();
-        float sum = 0;
-        for (int i = 0; i < weights.Length; i++) {
-            sum += weights[i];
-            if (random < sum)
-                return items[i].Value2;
-        }
-        return items[items.Count - 1].Value2;
+        return random;
     }
 
     public virtual float RandomValue() => Random.value;
