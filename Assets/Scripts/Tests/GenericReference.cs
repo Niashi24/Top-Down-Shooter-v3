@@ -10,29 +10,28 @@ public struct GenericReference<T>
     [OnValueChanged(nameof(ValidateT))]
     [SerializeField]
     [HideLabel]
-    [HideIf(nameof(IsValid))]
+    [ValidateInput(
+        nameof(IsValid),
+        "Incorrect Type"
+    )]
+    [InlineButton(nameof(Reset), "X")]
     Object _value;
 
-    [InlineButton(nameof(Reset), "X")]
-    [SerializeField, ShowIf(nameof(IsValid))] MonoBehaviour script;
-
     public T Value {
-        get => script as T;
-        set => script = value as MonoBehaviour;
+        get => _value as T;
+        set => _value = value as Object;
     }
 
-    private bool IsValid => script != null && script is T;
+    private bool IsValid => _value is T;
     private void ValidateT() {
         var gameobject = _value as GameObject;
-        if (gameobject) {
-            script = gameobject.GetComponent<T>() as MonoBehaviour;
-        }
+        if (gameobject)
+            _value = gameobject.GetComponent<T>() as MonoBehaviour;
 
-        if (!IsValid) _value = null;
+        if (!IsValid) Reset();
     }
 
     void Reset() {
         _value = null;
-        script = null;
     }
 }

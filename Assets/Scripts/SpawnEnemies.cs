@@ -12,7 +12,7 @@ public class SpawnEnemies : MonoBehaviour
     [SerializeField] Transform _currentPathPosition;
 
     [SerializeField] Vector2 _xSpawnRange = new Vector2(-5,5);
-    [SerializeField] WeightedRandom<GameObject> enemiesToSpawn;
+    [SerializeField] RandomSupplier<GameObject> enemiesToSpawn;
     [ShowInInspector, ReadOnly]
     int enemiesSpawned = 0;
 

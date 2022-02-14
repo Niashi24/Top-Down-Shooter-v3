@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class RandomPool<T> : RandomSupplier<T>
+public class RandomPool<T> : RandomSupplier<T>, IResettable
 {
     [SerializeField]
-    List<TypePair<int, T>> weights;
+    List<TypePair<int, T>> _objectPool;
 
     private List<T> pool;
 
-    [ShowInInspector, ReadOnly]
-    private List<int> numberOfEachItem;
-
     public void Reset() {
         pool = new List<T>();
-        foreach(var item in weights) {
+        foreach(var item in _objectPool) {
             for (int i = 0; i < item.Value1; i++) {
                 pool.Add(item.Value2);
             }
@@ -23,11 +20,12 @@ public class RandomPool<T> : RandomSupplier<T>
     }
 
     void OnEnable() {
-        Reset(); 
-        numberOfEachItem = new List<int>(weights.Map(x => x.Value1));    
+        Reset();   
     }
 
     public override T GetRandom() {
+        if (pool.Count == 0) return default;
+
         int index = (int)(RandomValue() * pool.Count);
         
         var random = pool[index];
