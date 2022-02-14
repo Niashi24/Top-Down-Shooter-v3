@@ -52881,7 +52881,6 @@ MonoBehaviour:
   _endLocation: {fileID: 82247544}
   test:
     _value: {fileID: 0}
-    script: {fileID: 0}
 --- !u!1 &953797236
 GameObject:
   m_ObjectHideFlags: 0
@@ -53804,7 +53803,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _currentPathPosition: {fileID: 1262106901}
   _xSpawnRange: {x: -5, y: 5}
-  enemiesToSpawn: {fileID: 11400000, guid: 48f1b4f97071e5446b4543755bf3c4fe, type: 2}
+  enemiesToSpawn: {fileID: 11400000, guid: da98b045a68436f45916b6ac48c3b809, type: 2}
 --- !u!114 &1262106903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59661,8 +59660,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resettables:
-  - _value: {fileID: 0}
-    script: {fileID: 0}
+  - _value: {fileID: 11400000, guid: da98b045a68436f45916b6ac48c3b809, type: 2}
+  resetOnStart: 1
 --- !u!1001 &2102644203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59780,63 +59779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae61a9f0e1a6f214b86e031cef2a8ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &388420735912724976
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829440, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 388420735797829468, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
-      propertyPath: m_Name
-      value: Health Pickup
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
 --- !u!1001 &4648301785469812810
 PrefabInstance:
   m_ObjectHideFlags: 0
