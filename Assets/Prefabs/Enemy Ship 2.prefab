@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3ddde5596a17141b9d87315e34c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _xRange: {x: -3, y: 3}
+  _xRange: {x: -6, y: 3}
 --- !u!114 &5145876702010493381
 MonoBehaviour:
   m_ObjectHideFlags: 0

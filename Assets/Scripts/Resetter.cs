@@ -9,7 +9,8 @@ public class Resetter : MonoBehaviour
     [SerializeField] bool resetOnStart = false;
 
     void Start() {
-        ResetVariables();
+        if (resetOnStart)
+            ResetVariables();
     }
 
     public void ResetVariables() {

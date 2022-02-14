@@ -11,7 +11,7 @@ public struct GenericReference<T>
     [SerializeField]
     [HideLabel]
     [ValidateInput(
-        nameof(IsValid),
+        "@IsT || IsNull",
         "Incorrect Type"
     )]
     [InlineButton(nameof(Reset), "X")]
@@ -22,13 +22,17 @@ public struct GenericReference<T>
         set => _value = value as Object;
     }
 
-    private bool IsValid => _value is T;
+    private bool IsT => _value is T;
+    private bool IsNull => _value == null;
     private void ValidateT() {
         var gameobject = _value as GameObject;
-        if (gameobject)
+        if (gameobject && typeof(T) != typeof(GameObject))
             _value = gameobject.GetComponent<T>() as MonoBehaviour;
 
-        if (!IsValid) Reset();
+        if (!IsT) {
+            Reset();
+            Debug.Log($"Must be type {typeof(T)}");
+        }
     }
 
     void Reset() {
