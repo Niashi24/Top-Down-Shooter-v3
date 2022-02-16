@@ -1,14 +1,14 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class WeightedRandom<T> : RandomSupplier<T>
+[System.Serializable]
+public class WeightedRandomClass<T>
 {
     [SerializeField]
     List<TypePair<int, T>> items;
 
-    public WeightedRandom(IEnumerable<TypePair<int, T>> items) {
+    public WeightedRandomClass(IEnumerable<TypePair<int, T>> items) {
         this.items = items.ToList();
     }
 
@@ -23,7 +23,7 @@ public class WeightedRandom<T> : RandomSupplier<T>
 
     public bool Empty => items.Count == 0;
 
-    public override T GetRandom() {
+    public T GetRandom() {
         return GetRandomWithWeights(GetWeights(items), items);
     }
 
@@ -42,7 +42,8 @@ public class WeightedRandom<T> : RandomSupplier<T>
     }
 
     T GetRandomWithWeights(float[] weights, List<TypePair<int, T>> items) {
-
+        if (Empty) return default;
+        
         var random = RandomValue();
         float sum = 0;
         for (int i = 0; i < weights.Length; i++) {

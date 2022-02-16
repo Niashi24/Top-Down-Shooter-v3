@@ -59709,6 +59709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resettables:
   - _value: {fileID: 11400000, guid: da98b045a68436f45916b6ac48c3b809, type: 2}
+  - _value: {fileID: 11400000, guid: 4446049e1e7f3ee438dec9bbfa12e6ff, type: 2}
   resetOnStart: 1
 --- !u!1001 &2102644203
 PrefabInstance:

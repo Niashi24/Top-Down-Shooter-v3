@@ -2,30 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeRandomPool<TValue> : RandomSupplier<TValue>
+
+public class UpgradeRandomPool<TValue> : RandomSupplier<TValue>, IResettable
 {
     [SerializeField]
-    List<UpgradePoolObject<TValue>> initialObjects;
-
-    private List<UpgradePoolObject<TValue>> currentObjects;
+    List<UpgradePoolObject<TValue>> objects;
     
-    private WeightedRandom<TValue> random;
+    private WeightedRandomClass<TValue> random;
 
     void OnEnable() {
-        currentObjects = new List<UpgradePoolObject<TValue>>(initialObjects);
-        random = new WeightedRandom<TValue>(
-            currentObjects.Map((x) => new TypePair<int, TValue>(x.weight, x.Value))
-        );
+        Reset();
     }
 
     public override TValue GetRandom()
     {
         //get a random object
         TValue randomObject = random.GetRandom();
+        if (randomObject == null) return DefaultObject;
         //if that object's upgrade level is maxed
         //remove the object's upgrade from the list and get another object
-        currentObjects.Find(x => x.Value.Equals(randomObject));
+        var obj = GetUpgradeFromObject(randomObject);
+        if (obj.number == UpgradeDrop.MAX_UPGRADE_LEVEL)
+        {
+            random.Remove(randomObject);
+            if (random.Empty)
+                return DefaultObject;
+            else
+                return GetRandom();
+        }
 
-        throw new System.NotImplementedException();
+        return randomObject;
     }
+
+    UpgradePoolObject<TValue> GetUpgradeFromObject(TValue value) =>
+        objects.Find(x => x.Value.Equals(value));
+
+    public void Reset()
+    {
+        if (objects == null) return;
+
+        random = new WeightedRandomClass<TValue>(
+            objects.Map((x) => new TypePair<int, TValue>(x.weight, x.Value))
+        );
+    }
+
+    public virtual TValue DefaultObject => default;
 }

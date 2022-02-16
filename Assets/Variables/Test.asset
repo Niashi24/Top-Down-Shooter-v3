@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a814141ace7962c4bab083617c229d3d, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  objects:
+  - number:
+      _usage: 2
+      _value: 0
+      _constant: {fileID: 0}
+      _variable: {fileID: 11400000, guid: 3c70dee8ac5de3d43bf43d24086ef119, type: 2}
+      _variableInstancer: {fileID: 0}
+    weight: 2
+    Value: {fileID: 1379386694008129124, guid: 24ef0ff53798e644394208c68de32e50, type: 3}
+  HealthDrop: {fileID: 388420735797829468, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}

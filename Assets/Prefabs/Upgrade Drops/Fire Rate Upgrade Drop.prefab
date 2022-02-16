@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1379386694008129122}
   - component: {fileID: 1379386694008129123}
   - component: {fileID: 1379386694008129120}
+  - component: {fileID: -4141328280718085195}
   m_Layer: 0
   m_Name: Fire Rate Upgrade Drop
   m_TagString: Untagged
@@ -128,3 +129,44 @@ MonoBehaviour:
     _constant: {fileID: 0}
     _variable: {fileID: 11400000, guid: 3c70dee8ac5de3d43bf43d24086ef119, type: 2}
     _variableInstancer: {fileID: 0}
+  OnCollect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -4141328280718085195}
+        m_TargetAssemblyTypeName: DestroyAfterTime, Assembly-CSharp
+        m_MethodName: StartDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1379386694008129122}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-4141328280718085195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379386694008129124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ec4af3c0898d346a6dd5f67bad94b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 3
+  _activateOnStart: 0
