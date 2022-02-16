@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class ScoreObject : ScriptableObject, IResettable
+public class ScoreTracker : ScriptableObject, IResettable
 {
     Dictionary<ScoreIdentifier, int> killsPerType;
 

@@ -29,7 +29,7 @@ public class PathPlayerInput : PlayerMovementInput
         }    
     }
 
-    public override Vector2 Direction {get{
+    public override Vector2 direction {get{
         if (Vector2.Distance(transform.position, currentTarget) < minDistance) {
             currentIndex++;
             if (currentIndex >= moves.Length) currentIndex = 0;

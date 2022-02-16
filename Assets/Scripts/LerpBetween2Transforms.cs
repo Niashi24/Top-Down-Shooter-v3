@@ -7,7 +7,6 @@ public class LerpBetween2Transforms : MonoBehaviour
     [SerializeField] Transform _targetObject;
     [SerializeField] Transform _startLocation;
     [SerializeField] Transform _endLocation;
-    [SerializeField] GenericReference<ITest> test;
 
     public void LerpBetween(float t) {
         _targetObject.position = Vector3.Lerp(

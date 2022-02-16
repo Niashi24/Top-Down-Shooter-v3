@@ -4,5 +4,8 @@ using UnityEngine;
 
 public abstract class PlayerMovementInput : MonoBehaviour
 {
-    public abstract Vector2 Direction {get;}
+    public Vector2 Direction =>
+        enabled ? direction : Vector2.zero;
+
+    public abstract Vector2 direction {get;}
 }

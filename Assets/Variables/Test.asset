@@ -21,4 +21,44 @@ MonoBehaviour:
       _variableInstancer: {fileID: 0}
     weight: 2
     Value: {fileID: 1379386694008129124, guid: 24ef0ff53798e644394208c68de32e50, type: 3}
+  - number:
+      _usage: 2
+      _value: 0
+      _constant: {fileID: 0}
+      _variable: {fileID: 11400000, guid: 6594b272edc135145b6881dcf71d4417, type: 2}
+      _variableInstancer: {fileID: 0}
+    weight: 2
+    Value: {fileID: 1379386694008129124, guid: 4c391cfaa11e64a4e8342219b117580b, type: 3}
+  - number:
+      _usage: 2
+      _value: 0
+      _constant: {fileID: 0}
+      _variable: {fileID: 11400000, guid: 4a68a1ce94cc2c1478ac6b34420fe639, type: 2}
+      _variableInstancer: {fileID: 0}
+    weight: 2
+    Value: {fileID: 1379386694008129124, guid: 179bc7b78ad56c14faefce15f2eb5dfe, type: 3}
+  - number:
+      _usage: 2
+      _value: 0
+      _constant: {fileID: 0}
+      _variable: {fileID: 11400000, guid: 5a6c39f52bcfc8949856ba85d88e7325, type: 2}
+      _variableInstancer: {fileID: 0}
+    weight: 2
+    Value: {fileID: 1379386694008129124, guid: 0b8da1966ccfbe44490f92e97d3129cf, type: 3}
+  - number:
+      _usage: 2
+      _value: 0
+      _constant: {fileID: 0}
+      _variable: {fileID: 11400000, guid: 4925ae6ad1b2b76408872bc1a4c4e757, type: 2}
+      _variableInstancer: {fileID: 0}
+    weight: 2
+    Value: {fileID: 1379386694008129124, guid: 29dd4e109bec02a4eb84e91b6b256066, type: 3}
+  - number:
+      _usage: 0
+      _value: 1
+      _constant: {fileID: 0}
+      _variable: {fileID: 0}
+      _variableInstancer: {fileID: 0}
+    weight: 1
+    Value: {fileID: 388420735797829468, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}
   HealthDrop: {fileID: 388420735797829468, guid: de59363a82bc86f4a953bc0291ba8904, type: 3}

@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FAn Shjt
+  m_Text: Fan Shot
 --- !u!222 &42877173
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52892,8 +52892,6 @@ MonoBehaviour:
   _targetObject: {fileID: 1504766312}
   _startLocation: {fileID: 1956434879}
   _endLocation: {fileID: 82247544}
-  test:
-    _value: {fileID: 0}
 --- !u!1 &953797236
 GameObject:
   m_ObjectHideFlags: 0
