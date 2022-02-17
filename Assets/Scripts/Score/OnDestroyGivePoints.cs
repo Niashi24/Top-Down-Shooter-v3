@@ -10,14 +10,14 @@ public class OnDestroyGivePoints : MonoBehaviour
     [SerializeField, Required]
     PlayerController _playerController;
     [SerializeField]
-    IntReference _scoreReference;
+    ScoreTracker _scoreTracker;
     [SerializeField]
-    IntReference _scoreForKill;
+    ScoreIdentifier _identifier;
 
     void OnEnable() => _playerController.OnDeath.AddListener(GiveScore);
 
     private void GiveScore(PlayerController controller)
     {
-        _scoreReference.Value += _scoreForKill.Value;
+        _scoreTracker.AddKill(_identifier);
     }
 }

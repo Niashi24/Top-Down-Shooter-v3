@@ -13,6 +13,20 @@ public static class ListExtensions
         return output;
     }
 
+    public static List<TOut> Map<TList, TOut>(this IEnumerable<TList> list, Func<TList, TOut> func) {
+        List<TOut> output = new List<TOut>();
+        foreach (var item in list)
+            output.Add(func(item));
+        return output;
+    }
+
+    public static int Sum<TIn>(this IEnumerable<TIn> list, Func<TIn, int> func) {
+        int sum = 0;
+        foreach (var item in list)
+            sum += func(item);
+        return sum;
+    }
+
     public static void RemoveNull<T>(this List<T> list) {
         for (int i = list.Count - 1; i >= 0; i--){
             if (list[i] == null)

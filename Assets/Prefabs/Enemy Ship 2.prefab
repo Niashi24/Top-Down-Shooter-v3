@@ -337,18 +337,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 5145876702010493378}
-  _scoreReference:
-    _usage: 2
-    _value: 0
-    _constant: {fileID: 0}
-    _variable: {fileID: 11400000, guid: 6cf5fa0606fbef146b007692eff06ae3, type: 2}
-    _variableInstancer: {fileID: 0}
-  _scoreForKill:
-    _usage: 1
-    _value: 0
-    _constant: {fileID: 11400000, guid: 32ad87f5a98073d44ad6c77daeff28fc, type: 2}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
+  _scoreTracker: {fileID: 11400000, guid: 456003f164c04734db1ba9131f692526, type: 2}
+  _identifier: {fileID: 11400000, guid: 492835068e4ff3b418a51b99512b7800, type: 2}
 --- !u!114 &-1996103152252933546
 MonoBehaviour:
   m_ObjectHideFlags: 0

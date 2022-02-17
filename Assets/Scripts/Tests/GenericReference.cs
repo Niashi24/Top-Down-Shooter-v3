@@ -31,7 +31,7 @@ public struct GenericReference<T>
 
         if (!IsT) {
             Reset();
-            Debug.Log($"Must be type {typeof(T)}");
+            Debug.LogWarning($"Must be type {typeof(T)}");
         }
     }
 

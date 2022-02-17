@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Sirenix.OdinInspector;
 
+[CreateAssetMenu]
 public class ScoreTracker : ScriptableObject, IResettable
 {
     Dictionary<ScoreIdentifier, int> killsPerType;
@@ -24,13 +26,11 @@ public class ScoreTracker : ScriptableObject, IResettable
             killsPerType[score]++;
         }
     }
+    
+    [ShowInInspector, ReadOnly]
+    public (ScoreIdentifier, int)[] Values =>
+        killsPerType.Map(x => (x.Key, x.Value)).ToArray();
 
-    public (ScoreIdentifier, int)[] GetValues() {
-        var keys = killsPerType.Keys.ToArray();
-        (ScoreIdentifier, int)[] pairs = new (ScoreIdentifier, int)[keys.Length];
-        for (int i = 0; i < keys.Length; i++)
-            pairs[i] = (keys[i], killsPerType[keys[i]]);
-        
-        return pairs;
-    } 
+    [ShowInInspector, ReadOnly]
+    public int Total => killsPerType.Sum(x => x.Key.ScorePerKill * x.Value);
 }
