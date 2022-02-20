@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public partial class InputDisplay : MonoBehaviour
+public class InputDisplay : MonoBehaviour
 {
     [SerializeField] InputSettings _input;
 
@@ -15,6 +15,7 @@ public partial class InputDisplay : MonoBehaviour
     [SerializeField] KeyDisplay _shoot;
 
     [SerializeField] UnityEvent OnAllActive;
+    [SerializeField] bool _stayActiveAfterPressed = true;
     bool triggeredEvent;
 
     void Update() {
@@ -36,9 +37,10 @@ public partial class InputDisplay : MonoBehaviour
     }
 
     void SetActiveIfPressed(KeyDisplay image, KeyCode key) {
-        if (image.active) return;
+        if (_stayActiveAfterPressed)
+            if (image.active) return;
         
-        image.SetActive(Input.GetKeyDown(key));
+        image.SetActive(Input.GetKey(key));
     }
 
     public bool AllAreActive {get =>

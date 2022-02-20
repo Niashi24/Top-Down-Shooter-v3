@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Missile
   m_EditorClassIdentifier: 
   damageMultiplier: 1.5
-  _shootSFX: {fileID: 8300000, guid: 9d1bc7bc3728b7f49a49ebd9b74f9892, type: 3}
+  _shootSFX: {fileID: 8300000, guid: 727d511b37f4b784ab27012569723bd5, type: 3}
   _hitSFX: {fileID: 8300000, guid: 9d1bc7bc3728b7f49a49ebd9b74f9892, type: 3}
