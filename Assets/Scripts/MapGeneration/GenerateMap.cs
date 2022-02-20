@@ -5,7 +5,6 @@ using UnityEngine.Tilemaps;
 using Sirenix.OdinInspector;
 using System;
 using Random = UnityEngine.Random;
-using TopDownShooter;
 
 namespace TopDownShooter.MapGeneration 
 {
