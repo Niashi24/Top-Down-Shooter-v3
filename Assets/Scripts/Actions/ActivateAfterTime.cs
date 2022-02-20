@@ -28,6 +28,7 @@ public class ActivateAfterTime : MonoBehaviour
             timer -= Time.deltaTime;
         if (timer <= 0 && !triggered) {
             triggered = true;
+            started = false;
             OnTrigger?.Invoke();
         }
     }
