@@ -4,6 +4,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Linq;
 using UnityAtoms.BaseAtoms;
+using UnityEngine.Events;
 
 public class PathManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PathManager : MonoBehaviour
     [SerializeField] List<Transform> targets;
 
     [SerializeField] FloatReference _currentProgress;
+    [SerializeField] UnityEvent OnFinishPath;
 
     [Button]
     public void StartMove() {
@@ -20,6 +22,12 @@ public class PathManager : MonoBehaviour
 
     void OnDrawGizmos() {
         Debug.DrawLine(transform.position, transform.position + Vector3.up * _distance, Color.green);    
+    }
+
+    void OnDrawGizmosSelected() {
+        foreach (var trans in targets) {
+            Gizmos.DrawWireCube(trans.position, Vector3.one);
+        }    
     }
 
     IEnumerator MoveOverTime() {
@@ -37,5 +45,7 @@ public class PathManager : MonoBehaviour
 
             yield return null;
         }
+
+        OnFinishPath?.Invoke();
     }
 }

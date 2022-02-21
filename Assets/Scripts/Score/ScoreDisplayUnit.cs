@@ -1,18 +1,17 @@
 using System;
 using UnityEngine.UI;
+using UnityEngine;
 
 [Serializable]
 public class ScoreDisplayUnit {
+    public GameObject gameObject;
     public Image icon;
     public Text numberKilled;
     public Text scorePerKill;
     public Text totalScore;
 
     public void SetActive(bool active) {
-        icon.enabled = active;
-        numberKilled.enabled = active;
-        scorePerKill.enabled = active;
-        totalScore.enabled = active;
+        gameObject.SetActive(active);
     }
 
     public void SetValues(ScoreIdentifier identifier, int kills) {
