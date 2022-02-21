@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dda2876c1ba23c4395b01b43b6743f4, type: 3}
-  m_Name: Enemy Random Pool
+  m_Name: Enemy Wave 2
   m_EditorClassIdentifier: 
   _objectPool:
-  - Value1: 50
+  - Value1: 25
     Value2: {fileID: 1738432608396686232, guid: 878d82329988b224688afa39719bfc93, type: 3}
-  - Value1: 50
+  - Value1: 25
     Value2: {fileID: 5145876702010493384, guid: bafc89a1d87b1b344b585bf6ced4e503, type: 3}
+  - Value1: 20
+    Value2: {fileID: 5145876702010493384, guid: 7bd29152248d6b5458ad33aa22ce4cab, type: 3}

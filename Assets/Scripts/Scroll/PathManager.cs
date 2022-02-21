@@ -15,9 +15,26 @@ public class PathManager : MonoBehaviour
     [SerializeField] FloatReference _currentProgress;
     [SerializeField] UnityEvent OnFinishPath;
 
+    Coroutine MovingCoroutine;
+
     [Button]
     public void StartMove() {
-        StartCoroutine(MoveOverTime());
+        MovingCoroutine = StartCoroutine(MoveOverTime());
+    }
+
+    void OnEnable() {
+        GameManager.OnStateChange += StopMove;
+    }
+
+    void OnDisable() {
+        GameManager.OnStateChange -= StopMove;
+    }
+
+    public void StopMove(GameState state) {
+        if (state == GameState.Game) return;
+        if (MovingCoroutine == null) return;
+        
+        StopCoroutine(MovingCoroutine);
     }
 
     void OnDrawGizmos() {

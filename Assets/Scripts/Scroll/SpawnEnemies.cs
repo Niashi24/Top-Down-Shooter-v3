@@ -37,13 +37,16 @@ public class SpawnEnemies : MonoBehaviour
     public void SpawnEnemy() {
         Vector3 offset = Vector2.up * 14.4f;
 
+        var enemyToSpawn = enemiesToSpawn.GetRandom();
+        if (enemyToSpawn == null) return;
+
         var enemy = Instantiate(
-            enemiesToSpawn.GetRandom(), 
+            enemyToSpawn, 
             GetPosition(offset), 
             Quaternion.Euler(0,0,180)
         );
         
-        if (TryGetComponent<DestroyIfTooFarAwayFrom>(out var destroyIf)) {
+        if (enemy.TryGetComponent<DestroyIfTooFarAwayFrom>(out var destroyIf)) {
             destroyIf.SetTransform(_currentPathPosition);
         }
 

@@ -9,6 +9,13 @@ public class RandomPool<T> : RandomSupplier<T>, IResettable
     List<TypePair<int, T>> _objectPool;
 
     private List<T> pool;
+    
+    public bool Empty => pool.Count == 0;
+
+    [ShowInInspector, ReadOnly]
+    public int CurrentCount => pool.Count;
+    [ShowInInspector, ReadOnly]
+    public int DefaultCount => _objectPool.Sum(x => x.Value1);
 
     public void Reset() {
         pool = new List<T>();

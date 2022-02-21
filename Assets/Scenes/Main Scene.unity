@@ -54622,7 +54622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efee5b9131996394faabe743a4cab06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalEnemies: 100
+  totalEnemies: 125
   _currentProgress:
     _usage: 2
     _value: 0
@@ -54655,7 +54655,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _currentPathPosition: {fileID: 1262106901}
   _xSpawnRange: {x: -5, y: 5}
-  enemiesToSpawn: {fileID: 11400000, guid: da98b045a68436f45916b6ac48c3b809, type: 2}
+  enemiesToSpawn: {fileID: 11400000, guid: 47e86c13d2c00a0439b63d3e1a557aa3, type: 2}
 --- !u!114 &1262106903
 MonoBehaviour:
   m_ObjectHideFlags: 0
