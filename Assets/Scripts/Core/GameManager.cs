@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject _upgradePanel;
     [SerializeField] PathManager _pathManager;
+    [SerializeField] GameObject _scorePanel;
 
     [Header("State")]
 
@@ -41,6 +42,9 @@ public class GameManager : MonoBehaviour
                 _upgradePanel.SetActive(false);
                 _pathManager.StartMove();
                 ChangeState(GameState.Game);
+                break;
+            case GameState.End:
+                _scorePanel.SetActive(true);
                 break;
         }
     }
