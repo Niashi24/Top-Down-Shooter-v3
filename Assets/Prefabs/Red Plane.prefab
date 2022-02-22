@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5414058092830979746}
   - component: {fileID: 5414058092830979756}
   - component: {fileID: 5414058092830979752}
+  - component: {fileID: 743054114341752931}
   m_Layer: 6
   m_Name: Red Plane
   m_TagString: Player
@@ -324,6 +325,22 @@ MonoBehaviour:
   _controller: {fileID: 5414058092830979757}
   _sprite: {fileID: 5414058092830979745}
   _flashTime: 0.1
+--- !u!114 &743054114341752931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5414058092830979750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b868635e7eee40949a861c1c7304154f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 8300000, guid: e69d672b89d461f48950eeba092df11f, type: 3}
+  _loop: 1
+  _playOnAwake: 1
+  _volume: 0.125
 --- !u!1 &5414058094044258870
 GameObject:
   m_ObjectHideFlags: 0

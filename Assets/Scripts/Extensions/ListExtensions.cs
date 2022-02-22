@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 public static class ListExtensions
 {
@@ -25,6 +26,17 @@ public static class ListExtensions
         foreach (var item in list)
             sum += func(item);
         return sum;
+    }
+
+    public static List<(int, T)> CountUnique<T>(this IEnumerable<T> list) {
+        Dictionary<T, int> counter = new Dictionary<T, int>();
+        foreach (var item in list) {
+            if (counter.ContainsKey(item))
+                counter[item]++;
+            else
+                counter[item] = 1;
+        }
+        return counter.Map(x => (counter[x.Key], x.Key)).ToList();
     }
 
     public static void RemoveNull<T>(this List<T> list) {

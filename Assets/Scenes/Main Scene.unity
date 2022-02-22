@@ -642,10 +642,10 @@ MonoBehaviour:
     totalScore: {fileID: 1633341541}
   _total: {fileID: 1818488416}
   _highScore:
-    _usage: 0
+    _usage: 2
     _value: 0
     _constant: {fileID: 0}
-    _variable: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 318ddb3065bae424d8b6596081d53bca, type: 2}
     _variableInstancer: {fileID: 0}
   _timeBetweenFlips: 1
 --- !u!95 &179866725
@@ -54839,11 +54839,20 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
+      time: 0.95
       value: 1
       inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      outSlope: 0
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0
+      outSlope: 0
+      tangentMode: 5
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -54852,7 +54861,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _currentPathPosition: {fileID: 1262106901}
   _xSpawnRange: {x: -5, y: 5}
-  enemiesToSpawn: {fileID: 11400000, guid: 47e86c13d2c00a0439b63d3e1a557aa3, type: 2}
+  enemiesToSpawn: {fileID: 11400000, guid: 7b36b42231551194380001242aff47bd, type: 2}
 --- !u!114 &1262106903
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,6 +16,8 @@ public class RandomPool<T> : RandomSupplier<T>, IResettable
     public int CurrentCount => pool.Count;
     [ShowInInspector, ReadOnly]
     public int DefaultCount => _objectPool.Sum(x => x.Value1);
+    [ShowInInspector, ReadOnly]
+    public List<(int, T)> CountOfEach => pool.CountUnique();
 
     public void Reset() {
         pool = new List<T>();

@@ -75,8 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6468341902652231549, guid: ed2a41ebba7ecaf4982d12abac648a4b,
-    type: 3}
+  m_Sprite: {fileID: -6468341902652231549, guid: ed2a41ebba7ecaf4982d12abac648a4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -162,8 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3199944607369484840}
-  _explosionPrefab: {fileID: 8232326275161605367, guid: 3ec3b788cd8166644aeaedc2d8eade24,
-    type: 3}
+  _explosionPrefab: {fileID: 8232326275161605367, guid: 3ec3b788cd8166644aeaedc2d8eade24, type: 3}
 --- !u!1 &5571640460223468919
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,8 +401,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6468341902652231549, guid: ed2a41ebba7ecaf4982d12abac648a4b,
-    type: 3}
+  m_Sprite: {fileID: -6468341902652231549, guid: ed2a41ebba7ecaf4982d12abac648a4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -490,5 +487,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3199944607369484840}
-  _explosionPrefab: {fileID: 8232326275161605367, guid: 3ec3b788cd8166644aeaedc2d8eade24,
-    type: 3}
+  _explosionPrefab: {fileID: 8232326275161605367, guid: 3ec3b788cd8166644aeaedc2d8eade24, type: 3}
