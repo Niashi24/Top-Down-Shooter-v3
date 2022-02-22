@@ -19,6 +19,10 @@ public class Health : MonoBehaviour
         _currentHealth.Value = MaxHealth;    
     }
 
+    public void SetMaxHealth(int maxHealth) {
+        _maxHealth.Value = maxHealth;
+    }
+
     public void TakeDamage(int damage) {
         //Debug.Log(damage);
         var newHealth = Mathf.Max(0, _currentHealth.Value - damage);

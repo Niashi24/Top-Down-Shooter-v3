@@ -30,6 +30,7 @@ public class PlayerShoot : MonoBehaviour
     }
 
     bool CanUpdate() {
+        if (_stats.ShotsPerSecond <= 0) return false;
         if (GameManager.I == null) 
             return true;
         return GameManager.I.State == GameState.Game;

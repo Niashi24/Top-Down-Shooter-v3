@@ -19,6 +19,17 @@ public class PlayerStats : ScriptableObject
     [SerializeField] IntReference maxHealth;
     public int MaxHealth => maxHealth.Value;
 
+    public void SetAll(int newDamage, int newHealth, int newSPS, int newPierce) {
+        shotsPerSecond.Value = newSPS;
+        pierce.Value = newPierce;
+        damage.Value = newDamage;
+
+        maxHealth.Value = newHealth;
+        health.Value = Mathf.Min(health.Value, maxHealth.Value);
+
+        OnStatChange?.Invoke(this);
+    }
+
     public void SetSPS(int newSPS) {
         shotsPerSecond.Value = newSPS;
         OnStatChange?.Invoke(this);

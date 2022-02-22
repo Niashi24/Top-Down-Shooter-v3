@@ -248,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _input: {fileID: 5414058092830979746}
   _health: {fileID: 5414058092830979753}
+  _stats: {fileID: 11400000, guid: 2f7221c7cf7ad494aa5295b5840172f4, type: 2}
   _speed: 5
   _invincibilityTime: 1
   OnGetHit:

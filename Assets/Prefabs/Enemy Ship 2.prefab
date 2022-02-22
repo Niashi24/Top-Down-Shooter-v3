@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _input: {fileID: 5145876702010493380}
   _health: {fileID: 5145876702010493376}
+  _stats: {fileID: 11400000, guid: 72cf8e4e80fb57445a8f1f307b6dc581, type: 2}
   _speed: 5
   _invincibilityTime: 0
   OnGetHit:
@@ -352,7 +353,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomObjects: {fileID: 11400000, guid: 4446049e1e7f3ee438dec9bbfa12e6ff, type: 2}
-  _chance: 0.5
+  _chance:
+    _usage: 2
+    _value: 1
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 7808a24d7678dc045bb09abbec7c1488, type: 2}
+    _variableInstancer: {fileID: 0}
 --- !u!114 &8675234181959661198
 MonoBehaviour:
   m_ObjectHideFlags: 0

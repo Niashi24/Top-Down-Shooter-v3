@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Enemy Wave 2
   m_EditorClassIdentifier: 
   _objectPool:
-  - Value1: 25
+  - Value1: 35
     Value2: {fileID: 1738432608396686232, guid: 878d82329988b224688afa39719bfc93, type: 3}
-  - Value1: 25
+  - Value1: 35
     Value2: {fileID: 5145876702010493384, guid: bafc89a1d87b1b344b585bf6ced4e503, type: 3}
-  - Value1: 20
+  - Value1: 30
     Value2: {fileID: 5145876702010493384, guid: 7bd29152248d6b5458ad33aa22ce4cab, type: 3}

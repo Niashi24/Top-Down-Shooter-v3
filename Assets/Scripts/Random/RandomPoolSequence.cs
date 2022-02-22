@@ -18,6 +18,7 @@ public abstract class RandomPoolSequence<T> : RandomSupplier<T>, IResettable
 
     public override T GetRandom()
     {
+        if (currentPool == null) return DefaultObject;
         var element = currentPool.GetRandom();
         if (currentPool.Empty)
             Increment();
