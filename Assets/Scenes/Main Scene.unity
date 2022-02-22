@@ -641,6 +641,12 @@ MonoBehaviour:
     scorePerKill: {fileID: 1633341543}
     totalScore: {fileID: 1633341541}
   _total: {fileID: 1818488416}
+  _highScore:
+    _usage: 0
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
   _timeBetweenFlips: 1
 --- !u!95 &179866725
 Animator:
@@ -842,13 +848,22 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
+      time: 0.8
       value: 1
       inSlope: 2.3987987
-      outSlope: 2.3987987
-      tangentMode: 0
+      outSlope: 0
+      tangentMode: 65
       weightedMode: 0
       inWeight: 0.02119708
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0
+      outSlope: 0
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -948,22 +963,31 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.4
+      time: 0.3
       value: 1
       inSlope: Infinity
-      outSlope: -1.3333333
+      outSlope: -1.8
       tangentMode: 71
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 0.2
-      inSlope: -1.3333333
-      outSlope: -1.3333333
-      tangentMode: 5
+      time: 0.8
+      value: 0.1
+      inSlope: -1.8
+      outSlope: 0
+      tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.1
+      inSlope: -0
+      outSlope: 0
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -1342,7 +1366,7 @@ Transform:
   m_Children:
   - {fileID: 222331382}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &532007239
 GameObject:
@@ -1442,7 +1466,7 @@ RectTransform:
   - {fileID: 1693199495}
   - {fileID: 179866722}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -53919,7 +53943,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1033053554
 PrefabInstance:
@@ -54846,6 +54870,7 @@ MonoBehaviour:
   targets:
   - {fileID: 519420032}
   - {fileID: 612034533}
+  _waitTimeBetweenFinish: 1
   _currentProgress:
     _usage: 2
     _value: 0
@@ -54858,6 +54883,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1262106900}
         m_TargetAssemblyTypeName: SetGameState, Assembly-CSharp
         m_MethodName: SetState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1550605237}
+        m_TargetAssemblyTypeName: IncrementInt, Assembly-CSharp
+        m_MethodName: Do
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1550605236}
+        m_TargetAssemblyTypeName: SaveVariable, Assembly-CSharp
+        m_MethodName: Save
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -59600,6 +59649,134 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1550605234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1550605238}
+  - component: {fileID: 1550605237}
+  - component: {fileID: 1550605236}
+  - component: {fileID: 1550605240}
+  - component: {fileID: 1550605239}
+  m_Layer: 0
+  m_Name: Variable Saver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1550605236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550605234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa87d67c29b3b340baee3efed9ae744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toSave:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 60cd2cb45f430bf47897a6c71ad72245, type: 2}
+    _variableInstancer: {fileID: 0}
+  key: Times Completed
+--- !u!114 &1550605237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550605234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5d56376b3dcdd4888cfcac915f278b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _int:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 60cd2cb45f430bf47897a6c71ad72245, type: 2}
+    _variableInstancer: {fileID: 0}
+--- !u!4 &1550605238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550605234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1550605239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550605234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa87d67c29b3b340baee3efed9ae744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toSave:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 318ddb3065bae424d8b6596081d53bca, type: 2}
+    _variableInstancer: {fileID: 0}
+  key: High Score
+--- !u!114 &1550605240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550605234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050ff37b5550f4b7e9bdf8b985aff484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1550605239}
+        m_TargetAssemblyTypeName: SaveVariable, Assembly-CSharp
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 6b5ac2097aa0ca849b2b3cb57917f5cb, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &1558886122
 GameObject:
   m_ObjectHideFlags: 0
@@ -59664,7 +59841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1599827788
 GameObject:
@@ -61122,7 +61299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resettables:
-  - _value: {fileID: 11400000, guid: da98b045a68436f45916b6ac48c3b809, type: 2}
+  - _value: {fileID: 11400000, guid: 47e86c13d2c00a0439b63d3e1a557aa3, type: 2}
   - _value: {fileID: 11400000, guid: 4446049e1e7f3ee438dec9bbfa12e6ff, type: 2}
   - _value: {fileID: 11400000, guid: 456003f164c04734db1ba9131f692526, type: 2}
   resetOnStart: 1

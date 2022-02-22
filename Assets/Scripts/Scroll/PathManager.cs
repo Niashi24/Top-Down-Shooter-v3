@@ -11,6 +11,7 @@ public class PathManager : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] float _distance = 1000;
     [SerializeField] List<Transform> targets;
+    [SerializeField] float _waitTimeBetweenFinish = 1;
 
     [SerializeField] FloatReference _currentProgress;
     [SerializeField] UnityEvent OnFinishPath;
@@ -62,6 +63,8 @@ public class PathManager : MonoBehaviour
 
             yield return null;
         }
+
+        yield return new WaitForSeconds(_waitTimeBetweenFinish);
 
         OnFinishPath?.Invoke();
     }

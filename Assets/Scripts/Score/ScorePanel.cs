@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
+using UnityAtoms.BaseAtoms;
 
 public class ScorePanel : MonoBehaviour
 {
     [SerializeField] ScoreTracker _tracker;
     [SerializeField] ScoreDisplayUnit[] _units;
     [SerializeField] Text _total;
+    [SerializeField] IntReference _highScore;
 
     [SerializeField] float _timeBetweenFlips;
     
@@ -39,8 +41,12 @@ public class ScorePanel : MonoBehaviour
             unit.SetActive(true);
             yield return WaitBetweenFlips;
         }
+
+        var total = _tracker.Total;
+        if (total > _highScore.Value)
+            _highScore.Value = total;
         
-        _total.text = _tracker.Total.ToString();
+        _total.text = total.ToString();
         _total.gameObject.SetActive(true);
     }
 }

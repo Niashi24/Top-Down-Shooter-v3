@@ -20,7 +20,7 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   pierce:
     _usage: 0
-    _value: 3
+    _value: 4
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
@@ -32,13 +32,13 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   health:
     _usage: 0
-    _value: 20
+    _value: 30
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
   maxHealth:
     _usage: 0
-    _value: 20
+    _value: 30
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
