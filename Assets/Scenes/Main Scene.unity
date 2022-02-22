@@ -61289,11 +61289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414058092830979757, guid: 5aa73a93172f2964c9da9082f578e5c3, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Move
+      value: SetState
       objectReference: {fileID: 0}
     - target: {fileID: 5414058092830979757, guid: 5aa73a93172f2964c9da9082f578e5c3, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MoveToScene, Assembly-CSharp
+      value: SetGameState, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5414058092830979757, guid: 5aa73a93172f2964c9da9082f578e5c3, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -61315,14 +61315,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5414058093442896198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4534154ff41f346bade75064662c6d, type: 3}
+  m_Script: {fileID: 11500000, guid: db91f7163e1aca04cb84f1cfa4ad1b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene:
-    _sceneAsset: {fileID: 102900000, guid: c3b0c2e23710fd6448028974f77ad81d, type: 3}
-    _sceneName: Main Scene
-    _scenePath: Assets/Scenes/Main Scene.unity
-    _buildIndex: 1
+  newState: 5
 --- !u!1001 &5774466995327109720
 PrefabInstance:
   m_ObjectHideFlags: 0
