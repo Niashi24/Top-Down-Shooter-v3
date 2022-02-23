@@ -6,7 +6,11 @@ using UnityAtoms.BaseAtoms;
 public class ActivateActionOnStart : MonoBehaviour
 {
     [SerializeField] List<GameObjectAction> _actions;
-    void Start() {
-        _actions.ForEach(action => action.Do(gameObject));    
+    void Start() {  
+        Activate();
+    }
+
+    public void Activate() {
+        _actions.ForEach(action => action.Do(gameObject));  
     }
 }

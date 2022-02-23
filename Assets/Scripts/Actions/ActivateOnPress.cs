@@ -10,6 +10,6 @@ public class ActivateOnPress : MonoBehaviour
     [SerializeField] UnityEvent OnPress;
 
     void Update() {
-        if (Input.GetKey(_keyCode)) OnPress?.Invoke();
+        if (Input.GetKeyDown(_keyCode)) OnPress?.Invoke();
     }
 }
