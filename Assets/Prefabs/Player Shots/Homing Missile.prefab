@@ -237,8 +237,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4239414877301166584, guid: ed2a41ebba7ecaf4982d12abac648a4b,
-    type: 3}
+  m_Sprite: {fileID: 4239414877301166584, guid: ed2a41ebba7ecaf4982d12abac648a4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -311,8 +310,8 @@ MonoBehaviour:
   _speed: 15
   damage: 1
   pierce: 0
-  _homingRadius: 5
-  _homingForce: 5
+  _homingRadius: 1.5
+  _homingForce: 3
   _targetMask:
     serializedVersion: 2
     m_Bits: 128
@@ -329,5 +328,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 8702309177885615838}
-  _explosionPrefab: {fileID: 8232326275161605367, guid: 3ec3b788cd8166644aeaedc2d8eade24,
-    type: 3}
+  _explosionPrefab: {fileID: 8232326275161605367, guid: 3ec3b788cd8166644aeaedc2d8eade24, type: 3}

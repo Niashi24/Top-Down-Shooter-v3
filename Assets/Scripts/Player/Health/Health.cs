@@ -33,10 +33,7 @@ public class Health : MonoBehaviour
         
 
         if (_currentHealth.Value == 0) {
-            if (OnDeath != null)
-                OnDeath();
-            else
-                Destroy(gameObject);
+            OnDeath?.Invoke();
         }
     }
 

@@ -54773,6 +54773,7 @@ GameObject:
   - component: {fileID: 1262106902}
   - component: {fileID: 1262106903}
   - component: {fileID: 1262106900}
+  - component: {fileID: 1262106904}
   m_Layer: 0
   m_Name: PathManager
   m_TagString: Untagged
@@ -54925,6 +54926,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1262106904}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1262106904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262106899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b868635e7eee40949a861c1c7304154f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 8300000, guid: 96449b83157470546b809ab1a530451a, type: 3}
+  _loop: 0
+  _playOnAwake: 0
+  _volume: 0.5
+  _audioSource: {fileID: 0}
 --- !u!1 &1268133008 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5774466995787069075, guid: 6990ecb4f200cc945a25e8cea9064666, type: 3}
@@ -61311,6 +61341,8 @@ MonoBehaviour:
   - _value: {fileID: 11400000, guid: 47e86c13d2c00a0439b63d3e1a557aa3, type: 2}
   - _value: {fileID: 11400000, guid: 4446049e1e7f3ee438dec9bbfa12e6ff, type: 2}
   - _value: {fileID: 11400000, guid: 456003f164c04734db1ba9131f692526, type: 2}
+  - _value: {fileID: 11400000, guid: da98b045a68436f45916b6ac48c3b809, type: 2}
+  - _value: {fileID: 11400000, guid: 7b36b42231551194380001242aff47bd, type: 2}
   resetOnStart: 1
 --- !u!114 &2078290361
 MonoBehaviour:

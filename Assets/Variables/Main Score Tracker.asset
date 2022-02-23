@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b424b15ad375d4bbc7b595b00934a3, type: 3}
   m_Name: Main Score Tracker
   m_EditorClassIdentifier: 
+  _float:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 65c51ca933217134e94bb105ac665fd9, type: 2}
+    _variableInstancer: {fileID: 0}

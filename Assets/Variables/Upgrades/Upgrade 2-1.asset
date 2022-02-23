@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Upgrade 2-1
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: d6311e4e3a5b23740988c0b534625f00, type: 2}
-  _bulletPrefab: {fileID: 153790182011709920, guid: c6d54478e2216974dae7ba84a1ae2489, type: 3}
+  _bulletPrefab: {fileID: 153790182011709920, guid: d3b8fb0f0b5e1a745b4c9104d2fe4927, type: 3}

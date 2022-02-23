@@ -16,6 +16,10 @@ public class SpawnEnemies : MonoBehaviour
     [ShowInInspector, ReadOnly]
     int enemiesSpawned = 0;
 
+    private List<GameObject> used = new List<GameObject>();
+    [ShowInInspector, ReadOnly]
+    public List<(int, GameObject)> CountOfEachUsed => used.CountUnique();
+
     public event System.Action<GameObject> OnSpawnEnemy;
 
     void Update() {
@@ -45,7 +49,8 @@ public class SpawnEnemies : MonoBehaviour
             GetPosition(offset), 
             Quaternion.Euler(0,0,180)
         );
-        
+        used.Add(enemyToSpawn);
+        //bad
         if (enemy.TryGetComponent<DestroyIfTooFarAwayFrom>(out var destroyIf)) {
             destroyIf.SetTransform(_currentPathPosition);
         }

@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void TakeDamage(int damage) {
+        if (_health.CurrentHealth == 0) return;
         if (invincibilityTimer > 0) return;
 
         _health.TakeDamage(damage);
@@ -70,6 +71,7 @@ public class PlayerController : MonoBehaviour
 
         if (_health.CurrentHealth == 0) {
             OnDeath?.Invoke(this);
+            Destroy(gameObject);
             return;
         }
 

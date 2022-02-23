@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'Increase Number of Bullets in a radial pattern
 
 
-    1 Shot -> 2
-    Shot -> 4 Shot -> 8 Shot'
+    1 Shot -> 4
+    Shot -> 7 Shot -> 10 Shot'
   _defaultLevel: {fileID: 11400000, guid: d67e403fe0f7c0842a1be50afab80b66, type: 2}
   Levels:
   - I: 1

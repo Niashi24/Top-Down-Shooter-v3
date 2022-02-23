@@ -27,6 +27,11 @@ public class BulletManager : MonoBehaviour
         OnShoot?.Invoke(this);
     }
 
+    [Sirenix.OdinInspector.Button]
+    public void GetBullets() {
+        bullets = new List<BulletScript>(GetComponentsInChildren<BulletScript>());
+    }
+
     void Update() {
         timer += Time.deltaTime;
         if (timer > _maxTime)

@@ -7,7 +7,7 @@ using System.Linq;
 [CreateAssetMenu(menuName = "Skill Tree/Value")]
 public class SkillTree : ScriptableObject
 {
-    [SerializeField, TextArea] string description;
+    [SerializeField, TextArea(1, 10)] string description;
     public string Description => description;
 
     [SerializeField] Upgrade _defaultLevel;

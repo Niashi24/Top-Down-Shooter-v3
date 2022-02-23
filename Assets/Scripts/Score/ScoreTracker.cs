@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Sirenix.OdinInspector;
+using UnityAtoms.BaseAtoms;
 
 [CreateAssetMenu]
 public class ScoreTracker : ScriptableObject, IResettable
 {
     Dictionary<ScoreIdentifier, int> killsPerType;
+
+    [SerializeField] FloatReference _float;
 
     public int this[ScoreIdentifier scoreIdentifier] => killsPerType[scoreIdentifier];
 
