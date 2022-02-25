@@ -6548,7 +6548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8213cbff986434a40bc5e125beefabb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keyCode: 286
+  _keyCode: 96
   OnPress:
     m_PersistentCalls:
       m_Calls:

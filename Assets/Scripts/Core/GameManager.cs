@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void ChangeState(GameState newState) {
+        if (newState == State) return;
         State = newState;
         
         OnStateChange?.Invoke(State);

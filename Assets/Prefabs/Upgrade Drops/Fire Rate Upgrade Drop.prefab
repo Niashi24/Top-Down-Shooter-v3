@@ -196,10 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b868635e7eee40949a861c1c7304154f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clip: {fileID: 8300000, guid: 3905cc1184f78cd4d8ba67c36ea894e9, type: 3}
-  _loop: 0
+  _soundClip: {fileID: 11400000, guid: c28ac712158ecd04a8d2190bc555ecb9, type: 2}
   _playOnAwake: 0
-  _volume: 0.2
   _audioSource: {fileID: 7155358198752689086}
 --- !u!82 &7155358198752689086
 AudioSource:

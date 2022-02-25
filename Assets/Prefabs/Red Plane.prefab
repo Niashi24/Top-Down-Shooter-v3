@@ -337,10 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b868635e7eee40949a861c1c7304154f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clip: {fileID: 8300000, guid: e69d672b89d461f48950eeba092df11f, type: 3}
-  _loop: 1
+  _soundClip: {fileID: 11400000, guid: 72c634468b8cd2f4cb0d4d917b6d5c39, type: 2}
   _playOnAwake: 1
-  _volume: 0.05
   _audioSource: {fileID: 0}
 --- !u!1 &5414058094044258870
 GameObject:

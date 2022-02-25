@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class PlayAudio : MonoBehaviour
 {
-    [SerializeField] AudioClip _clip;
-    [SerializeField] bool _loop;
+    [SerializeField] SoundClip _soundClip;
     [SerializeField] bool _playOnAwake;
-    [SerializeField] float _volume;
     [SerializeField] AudioSource _audioSource;
 
     void Awake() {
@@ -18,14 +16,19 @@ public class PlayAudio : MonoBehaviour
     }
 
     void UpdateAudioSource() {
+        if (AudioManager.I != null) return;
         if (_audioSource == null) _audioSource = gameObject.AddComponent<AudioSource>();
-        _audioSource.loop = _loop;
-        _audioSource.clip = _clip;
-        _audioSource.volume = _volume;
+        _audioSource.loop = _soundClip.Loop;
+        _audioSource.clip = _soundClip.Clip;
+        _audioSource.volume = _soundClip.Volume;
     }
 
     public void Play() {
-        UpdateAudioSource();
-        _audioSource.Play();
+        if (AudioManager.I != null) {
+            AudioManager.I.PlaySound(_soundClip);
+        } else {
+            UpdateAudioSource();
+            _audioSource.Play();
+        }
     }
 }

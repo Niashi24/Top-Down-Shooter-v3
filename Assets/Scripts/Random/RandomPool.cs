@@ -39,8 +39,6 @@ public class RandomPool<T> : RandomSupplier<T>, IResettable
         
         var random = pool[index];
         pool.RemoveAt(index);
-        var go = random as GameObject;
-        if (go != null) Debug.Log(go.name, this);
 
         return random;
     }
