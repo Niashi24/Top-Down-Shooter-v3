@@ -12,13 +12,14 @@ public class SaveLoadCustomization : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (PlayerPrefs.HasKey(customizationKey)) {
-            _customizationEnabled.Value = PlayerPrefs.GetInt(customizationKey) == 1;
-        } else {
-            _customizationEnabled.Value = Random.value > 0.5f;
-            PlayerPrefs.SetInt(customizationKey, _customizationEnabled ? 1 : 0);
-            PlayerPrefs.Save();
-        }
+        _customizationEnabled.Value = true;
+        // if (PlayerPrefs.HasKey(customizationKey)) {
+        //     _customizationEnabled.Value = PlayerPrefs.GetInt(customizationKey) == 1;
+        // } else {
+        //     _customizationEnabled.Value = Random.value > 0.5f;
+        //     PlayerPrefs.SetInt(customizationKey, _customizationEnabled ? 1 : 0);
+        //     PlayerPrefs.Save();
+        // }
     }
 
     [Button]
