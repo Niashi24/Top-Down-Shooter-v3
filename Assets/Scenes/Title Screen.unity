@@ -4000,6 +4000,7 @@ MonoBehaviour:
     _constant: {fileID: 0}
     _variable: {fileID: 11400000, guid: 70e1c9dbf298c7f4db29fa791ced7a5f, type: 2}
     _variableInstancer: {fileID: 0}
+  _percentCustomization: 0.6666667
 --- !u!4 &679260261
 Transform:
   m_ObjectHideFlags: 0

@@ -9,22 +9,35 @@ public class SaveLoadCustomization : MonoBehaviour
     [SerializeField] BoolReference _customizationEnabled;
     private const string customizationKey = "Customization";
 
+    [SerializeField, Range(0,1)] float _percentCustomization = .5f;
+
     // Start is called before the first frame update
     void Awake()
     {
-        _customizationEnabled.Value = true;
-        // if (PlayerPrefs.HasKey(customizationKey)) {
-        //     _customizationEnabled.Value = PlayerPrefs.GetInt(customizationKey) == 1;
-        // } else {
-        //     _customizationEnabled.Value = Random.value > 0.5f;
-        //     PlayerPrefs.SetInt(customizationKey, _customizationEnabled ? 1 : 0);
-        //     PlayerPrefs.Save();
-        // }
+        if (HasPlayedGame) {
+            _customizationEnabled.Value = GetCustomizationValueFromPlayerPrefs();
+        } else {
+            _customizationEnabled.Value = RandomBool(_percentCustomization);
+            SaveCustomizationValue(_customizationEnabled.Value);
+        }
     }
 
-    [Button]
-    public void ResetCustomization() {
+    bool HasPlayedGame => PlayerPrefs.HasKey(customizationKey);
+
+    bool GetCustomizationValueFromPlayerPrefs() => PlayerPrefs.GetInt(customizationKey) == 1;
+
+    void SaveCustomizationValue(bool customizationEnabled) {
+        PlayerPrefs.SetInt(customizationKey, customizationEnabled ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    
+    bool RandomBool(float percentTrue) => Random.value < percentTrue;
+
+    #if UNITY_EDITOR
+    [UnityEditor.MenuItem("Tools/SkyShooter/Reset Customization")]
+    public static void ResetCustomization() {
         Debug.Log("Reset");
         PlayerPrefs.DeleteKey(customizationKey);
     }
+    #endif
 }
