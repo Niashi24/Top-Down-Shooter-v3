@@ -27,13 +27,10 @@ public class PlayerController : MonoBehaviour
 
     void Awake() {
         rbdy2D = GetComponent<Rigidbody2D>();
-        //sorry clean architecture, i need to make sure the title screen guys keep their set health
-        //note: i don't actually have to do this, I can just make another playerstats
-        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex != 0)
-            UpdateHealth();
+        ResetHealth();
     }
 
-    void UpdateHealth()
+    void ResetHealth()
     {
         _health.SetMaxHealth(_stats.MaxHealth);
         _health.Heal(_health.MaxHealth);

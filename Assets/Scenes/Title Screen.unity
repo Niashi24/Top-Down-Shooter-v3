@@ -5078,6 +5078,10 @@ PrefabInstance:
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1738432608396686210, guid: 878d82329988b224688afa39719bfc93, type: 3}
+      propertyPath: _stats
+      value: 
+      objectReference: {fileID: 11400000, guid: c8e435c2b974f1f499d67806f8f930f3, type: 2}
+    - target: {fileID: 1738432608396686210, guid: 878d82329988b224688afa39719bfc93, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -6738,6 +6742,10 @@ PrefabInstance:
       propertyPath: _currentHealth._value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1738432608396686210, guid: 878d82329988b224688afa39719bfc93, type: 3}
+      propertyPath: _stats
+      value: 
+      objectReference: {fileID: 11400000, guid: bee0af43de53eb24ca1406e35415d059, type: 2}
     - target: {fileID: 1738432608396686210, guid: 878d82329988b224688afa39719bfc93, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
       value: 3
