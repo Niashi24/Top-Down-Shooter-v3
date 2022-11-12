@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288e85017facc8b45b82bcdd1f80498d, type: 3}
   m_Name: Selected Skill Tree
   m_EditorClassIdentifier: 
-  _value: {fileID: 11400000, guid: b4ff9bd4084317342a18a316d16d4c65, type: 2}
+  _value: {fileID: 11400000, guid: a76337476a270a244824d3be931bee63, type: 2}
